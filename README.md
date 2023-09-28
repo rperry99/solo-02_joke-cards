@@ -1,5 +1,9 @@
 # Solo 02 - Joke Components
 
+<p align="center">
+    <img src="screenshot.png">
+</p>
+
 **Challenge**:
 
 - Render 4-5 <Joke/> components.
