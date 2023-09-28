@@ -6,6 +6,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Header */
 header h1 {
   color: #333;
@@ -19,8 +25,17 @@ header h1 {
   flex-wrap: wrap;
   width: 90%;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   margin-top: 100px;
+}
+
+@media (max-width: 426px) {
+  .joke-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 /* Cards */
@@ -37,6 +52,7 @@ header h1 {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .punchline {
@@ -54,8 +70,16 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
+  font-size: 0.75rem;
+  align-self: flex-end;
+  text-align: center;
+}
+
+@media (min-width: 1332px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 footer a,
