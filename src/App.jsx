@@ -1,35 +1,17 @@
 import Joke from './Joke.jsx';
+import jokesList from './jokeList.js';
 import './App.css';
 
 function App() {
+  const jokeElements = jokesList.map((joke) => {
+    return <Joke setup={joke.setup} punchline={joke.punchline} />;
+  });
   return (
     <>
       <header>
         <h1>Poke-Puns!</h1>
       </header>
-      <section className="joke-container">
-        <Joke
-          setup="What do you call a Pikachu that can fix computers?"
-          punchline="Geek-achu."
-        />
-        <Joke
-          setup="Why can’t you blindfold a Pokémon?"
-          punchline="Because it’s going to Pikachu!"
-        />
-        <Joke
-          setup="What’s the name of the Pokémon that traveled with Dorothy to Oz?"
-          punchline="Totodile."
-        />
-        <Joke
-          setup="Which Pokémon could also be a pirate?"
-          punchline="Arrrrrr-bok."
-        />
-        <Joke
-          setup="I asked my dad why a grown man would play Pokémon Go?"
-          punchline="He said “Wynaut.”"
-        />
-        <Joke punchline="I'm so sorry about these bad puns... I should've kept my big meowth shut." />
-      </section>
+      <section className="joke-container">{jokeElements}</section>
       <footer>
         <p>
           Jokes courtesy of ScaryMommy over at &nbsp;
