@@ -13,7 +13,7 @@ function Joke(props) {
         {props.setup && <p className="setup">{props.setup}</p>}
         {isShown && <p className="punchline">{props.punchline}</p>}
         <button className="show-punchline" onClick={toggleShown}>
-          Toggle Punchline
+          {isShown ? 'Hide' : 'Show'} Punchline
         </button>
       </div>
     </>
