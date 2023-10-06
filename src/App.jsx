@@ -4,7 +4,15 @@ import './App.css';
 
 function App() {
   const jokeElements = jokesList.map((joke) => {
-    return <Joke setup={joke.setup} punchline={joke.punchline} />;
+    return (
+      <Joke
+        setup={joke.setup}
+        punchline={joke.punchline}
+        key={joke.id}
+        id={joke.id}
+        isShown={joke.isShown ? 'True' : 'False'}
+      />
+    );
   });
   return (
     <>

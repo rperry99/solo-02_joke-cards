@@ -53,11 +53,23 @@ header h1 {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  position: relative;
 }
 
 .punchline {
   font-weight: 700;
   font-size: 0.8rem;
+}
+
+/* Show Punchline Button */
+.show-punchline {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: lightskyblue;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
 }
 
 /* Footer */
